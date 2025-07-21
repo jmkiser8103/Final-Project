@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow Solutions - Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    h5 {
+        text-align: center;
+        color: #333;
+    }
+    h6 {
+        text-align: center;
+        color: #333;
+    }
+    .task-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .task-form input, .task-form select {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1rem;
+    }
+    .task-form label {
+      font-weight: bold;
+    }
+    #taskmanager {
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .task {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-left: 5px solid #ccc;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .task.important {
+      border-left-color: red;
+    }
+    .task.completed .task-name {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .task-actions button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>TaskFlow Solutions </h1>
+
+  <h2>Task Manager</h2>
+  <form id="taskForm" class="task-form">
+    <label for="taskName"> * Task Name:</label>
+    <input type="text" id="taskName" required>
+
+    <label for="priority">Priority:</label>
+    <select id="priority">
+      <option value="High">High</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="Low">Low</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="isImportant">
+      Mark as Important
+    </label>
+
+    <label>
+      <input type="checkbox" id="isCompleted">
+      Mark as Completed
+    </label>
+
+    <button type="submit">Add Task</button>
+    <p> * = required input </p>
+  </form>
+
+  <h5>Task Manager Version 1.0</h5>
+  <h6>July 21, 2025</h6>
+  <div id="taskmanager"></div>
+
+  <script src="TaskManagerApp.js"></script>
+</body>
+</html>
