@@ -73,7 +73,11 @@ Project: Interactive Task Manager
   <li>Apply a strikethrough to completed tasks.</li>
   <li>Console Logging</li>
   <li>Every time a task is added, updated, or deleted, the full task list must be logged in the console using:</li>
-  <li>console.log(JSON.stringify(tasks));</li>
+ 
+  ```
+  console.log(JSON.stringify(tasks));
+  ```
+
 </ul>
 
 ### 4. Non-Functional Requirements
